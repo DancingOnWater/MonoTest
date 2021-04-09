@@ -1,7 +1,8 @@
 
 Инструкция по сборке и запуску испытательного ПО Mono
-
-1. Установить сервер БД postgresql
+0. Скопировать Npgsql.dll, Entityframework.dll, Entityframework6.Npgsql.dlll в дирректорию с проектом
+1. Установить сервер БД postgresql.
+1.1 Восставноить БД из файла TestBaseBackup
 2. В файле {путь к проекту}/testMono/Config.cs в строке:
 
 	"Host={адрес сервера};Database={имя БД};Username={имя пользователя};Password={пароль};",
@@ -23,12 +24,5 @@
 5.3. Выполнить команду msbuild testMono.sln -t:Rebuild -p:Configuration=Release
 5.4. Выполнить команду mono ./testMono/bin/Release/net472/testMono.exe
  
-6. При успешном выполнении в консоль будет выведено:
-	Mono.Runtime
-	CLR version: <version>
-	TestConnection: start
-	MsSQL: Ок
-	PostgreSQL: Ок
-	TestConnection: finish
-7. При появлении ошибок, в консоль будет выведены красным цветом сообщения об ошибках.
+При появлении ошибок, в консоль будет выведены красным цветом сообщения об ошибках.
 

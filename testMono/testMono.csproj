@@ -6,11 +6,29 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <TargetFramework>net472</TargetFramework>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
+  <ItemGroup Condition="false">
+    <PackageReference Include="EntityFramework6.Npgsql" Version="6.4.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Npgsql" Version="4.1.5" />
+	<Reference Include="System.ComponentModel.Composition" />
+	<Reference Include="System.ComponentModel.DataAnnotations" />
+	<Reference Include="System" />
+	<Reference Include="System.Data" />
+  </ItemGroup>
+
+		
+  <ItemGroup Condition="true">
+    <Reference Include="EntityFramework">
+      <HintPath>..\EntityFramework.dll</HintPath>
+		<CopyLocal>false</CopyLocal>
+    </Reference>
+    <Reference Include="EntityFramework6.Npgsql">
+      <HintPath>..\EntityFramework6.Npgsql.dll</HintPath>
+		<CopyLocal>false</CopyLocal>
+	</Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\Npgsql.dll</HintPath>
+		<CopyLocal>false</CopyLocal>
+	</Reference>
   </ItemGroup>
 </Project>

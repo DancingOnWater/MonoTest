@@ -17,6 +17,10 @@ namespace testMono
             WriteLine("CLR version: ",  Environment.Version.ToString());
 
             TestConnection.start();
+
+            TestFeature.start();
+
+            TestEntityFramework.start();
         }
 
         public static void WriteLine(string msg, ConsoleColor fgrClr = ConsoleColor.Green) {

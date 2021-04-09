@@ -23,7 +23,7 @@ namespace testMono
                 MainClass.WriteLine("PostgreSQL: ", "Ok");
             }
             catch (Exception e){
-                MainClass.WriteErrorLine("PostgreSQL: ", "failed", e.Message);
+                MainClass.WriteErrorLine("PostgreSQL: ", "failed", e.StackTrace);
             }
             MainClass.WriteLine(nameof(TestConnection) + ": ", "finish");
         }
