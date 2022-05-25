@@ -18,9 +18,12 @@ namespace testMono
 
             TestConnection.start();
 
+
             TestFeature.start();
 
             TestEntityFramework.start();
+
+            TestWritefile.start();
         }
 
         public static void WriteLine(string msg, ConsoleColor fgrClr = ConsoleColor.Green) {
